@@ -1,3 +1,3 @@
 @echo off
-        cd /d "E:\React_TOP\Media"
+        cd /d "С:\Media"
         start cmd.exe /k "npm run dev"
