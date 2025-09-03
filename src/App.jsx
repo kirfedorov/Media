@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { useMedia } from "./hooks/useMedia";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const current = useMedia(10000); // 10 сек на медиафайл
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="app">
+      {/* ФОН */}
+      {current?.type === "image" && (
+        <div
+          className="background"
+          style={{
+            backgroundImage: `url(${current.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+      )}
 
-export default App
+      {current?.type === "video" && (
+        <video
+          className="background"
+          src={current.src}
+          autoPlay
+          muted
+          loop
+        />
+      )}
+
+      {/* ЗАТЕМНЕНИЕ */}
+      <div className="overlay" />
+
+      {/* КАСТОМНАЯ ШАПКА */}
+      <div className="titlebar">
+        <div className="title">Медицинский центр и стоматология Аполлонния Мед»</div>
+        <div className="window-buttons">
+          {/* <button onClick={() => window.windowControls.minimize()}>−</button> */}
+          {/* <button onClick={() => window.windowControls.toggleMaximize()}>▢</button> */}
+          <button onClick={() => window.windowControls.close()}>×</button>
+        </div>
+      </div>
+
+      {/* Контент */}
+      <div className="content">
+        <h1>Фон может быть картинкой или видео 🎬</h1>
+        <p>Положите JPG/PNG/MP4/WEBM в папку <code>src/assets/media</code>.</p>
+        <p>Можно поставить календарь или время.</p>
+      </div>
+    </div>
+  );
+}
