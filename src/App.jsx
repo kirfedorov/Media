@@ -32,14 +32,14 @@ export default function App() {
       <div className="overlay" />
 
       {/* КАСТОМНАЯ ШАПКА */}
-      {/* <div className="titlebar"> */}
-        {/* <div className="title">Аполлонния Мед 2025</div> */}
-        {/* <div className="window-buttons"> */}
+      <div className="titlebar">
+        <div className="title">Аполлонния Мед 2025</div>
+        <div className="window-buttons">
           {/* <button onClick={() => window.windowControls.minimize()}>−</button> */}
           {/* <button onClick={() => window.windowControls.toggleMaximize()}>▢</button> */}
-          {/* <button onClick={() => window.windowControls.close()}>×</button> */}
-        {/* </div> */}
-      {/* </div> */}
+          <button onClick={() => window.windowControls.close()}>×</button>
+        </div>
+      </div>
 
       {/* Контент */}
       <div className="content">
