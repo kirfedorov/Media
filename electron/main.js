@@ -9,10 +9,10 @@ let win;
 
 function createWindow() {
   win = new BrowserWindow({
-    width: 1080,
-    height: 1920,
-    minWidth: 900,
-    minHeight: 600,
+    width: 360,
+    height: 640,
+    // minWidth: 900,
+    // minHeight: 600,
     frame: false,                 // <-- без рамок
     transparent: true,           // оставим фон нормальным (без прозрачности)
     show: false,                  // покажем, когда готов

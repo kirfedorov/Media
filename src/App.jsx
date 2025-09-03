@@ -2,7 +2,7 @@ import React from "react";
 import { useMedia } from "./hooks/useMedia";
 
 export default function App() {
-  const current = useMedia(10000); // 10 сек на медиафайл
+  const current = useMedia(20000); // 10 сек на медиафайл
 
   return (
     <div className="app">
@@ -32,20 +32,20 @@ export default function App() {
       <div className="overlay" />
 
       {/* КАСТОМНАЯ ШАПКА */}
-      <div className="titlebar">
-        <div className="title">Медицинский центр и стоматология Аполлонния Мед»</div>
-        <div className="window-buttons">
+      {/* <div className="titlebar"> */}
+        {/* <div className="title">Аполлонния Мед 2025</div> */}
+        {/* <div className="window-buttons"> */}
           {/* <button onClick={() => window.windowControls.minimize()}>−</button> */}
           {/* <button onClick={() => window.windowControls.toggleMaximize()}>▢</button> */}
-          <button onClick={() => window.windowControls.close()}>×</button>
-        </div>
-      </div>
+          {/* <button onClick={() => window.windowControls.close()}>×</button> */}
+        {/* </div> */}
+      {/* </div> */}
 
       {/* Контент */}
       <div className="content">
-        <h1>Фон может быть картинкой или видео 🎬</h1>
+        {/* <h1>Фон может быть картинкой или видео 🎬</h1>
         <p>Положите JPG/PNG/MP4/WEBM в папку <code>src/assets/media</code>.</p>
-        <p>Можно поставить календарь или время.</p>
+        <p>Можно поставить календарь или время.</p> */}
       </div>
     </div>
   );
