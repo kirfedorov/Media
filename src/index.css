@@ -1,7 +1,7 @@
 :root {
   color-scheme: dark;
-  --bg: #ffffffe3;
-  --panel: #0a0a2010;
+  --bg: #006effe3;
+  --panel: #07073510;
   --text: #ececf1;
   --muted: #9aa0a6;
   --accent: #3b82f6;
@@ -66,7 +66,7 @@ html, body, #root {
   align-items: center;
   padding: 0 10px;
   gap: 8px;
-  border-bottom: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(10, 59, 194, 0.027);
 }
 
 .title {
@@ -88,8 +88,8 @@ html, body, #root {
   width: 30px;
   height: 28px;
   border-radius: 6px;
-  border: 1px solid rgba(255,255,255,.08);
-  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(1, 15, 219, 0.08);
+  background: rgba(0, 68, 255, 0.04);
   color: var(--text);
   display: grid;
   place-items: center;
@@ -98,7 +98,7 @@ html, body, #root {
   line-height: 1;
   transition: transform .05s ease, background .2s ease, border-color .2s ease;
 }
-.btn:hover { background: rgba(255,255,255,.08); }
+.btn:hover { background: rgba(255, 255, 255, 0.021); }
 .btn:active { transform: translateY(1px); }
 .btn-close:hover { background: rgba(239, 68, 68, .18); border-color: rgba(239, 68, 68, .4); }
 

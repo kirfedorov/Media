@@ -9,13 +9,15 @@ let win;
 
 function createWindow() {
   win = new BrowserWindow({
-    width: 1080,
-    height: 1920,
-    minWidth: 640,
-    minHeight: 360,
-    fullscreen: true,   // на весь экран
+    // width: 1080,
+    // height: 1920,
+    width: 360,
+    height: 640,
+    // minWidth: 640,
+    // minHeight: 360,
+    // fullscreen: true,   // на весь экран
     frame: false,       // без рамки
-    kiosk: true,        // блокировка "выхода" пользователем
+    // kiosk: true,        // блокировка "выхода" пользователем
     transparent: true,           // оставим фон нормальным (без прозрачности)
     show: false,                  // покажем, когда готов
     backgroundColor: '#2222c0d0',   // тёмный фон при запуске
