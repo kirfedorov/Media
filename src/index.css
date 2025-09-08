@@ -1,16 +1,20 @@
 :root {
   color-scheme: dark;
   --bg: #006effe3;
-  --panel: #07073510;
+  --panel: #07073500;
   --text: #ececf1;
-  --muted: #9aa0a6;
+  --muted: #b8b8b8;
   --accent: #3b82f6;
   --red: #ef4444;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   margin: 0;
   background: var(--bg);
@@ -26,6 +30,7 @@ html, body, #root {
   position: relative;
   overflow: hidden;
 }
+
 .background {
   position: absolute;
   inset: 0;
@@ -51,7 +56,8 @@ html, body, #root {
   z-index: 0;
 }
 
-.titlebar, .content {
+.titlebar,
+.content {
   position: relative;
   z-index: 2;
 }
@@ -88,7 +94,7 @@ html, body, #root {
   width: 30px;
   height: 28px;
   border-radius: 6px;
-  border: 1px solid rgba(1, 15, 219, 0.08);
+  border: 1px solid rgba(212, 212, 212, 0.08);
   background: rgba(0, 68, 255, 0.04);
   color: var(--text);
   display: grid;
@@ -98,9 +104,47 @@ html, body, #root {
   line-height: 1;
   transition: transform .05s ease, background .2s ease, border-color .2s ease;
 }
-.btn:hover { background: rgba(255, 255, 255, 0.021); }
-.btn:active { transform: translateY(1px); }
-.btn-close:hover { background: rgba(239, 68, 68, .18); border-color: rgba(239, 68, 68, .4); }
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.021);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-close:hover {
+  background: rgba(239, 68, 68, .18);
+  border-color: rgba(239, 68, 68, .4);
+}
+
+.btn-menu {
+  width: 35px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid rgba(212, 212, 212, 0.08);
+  background: rgba(0, 68, 255, 0.04);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  font-size: 8px;
+  line-height: 1;
+  transition: transform .05s ease, background .2s ease, border-color .2s ease;
+}
+
+.btn-menu:hover {
+  background: rgba(255, 255, 255, 0.021);
+}
+
+.btn-menu:active {
+  transform: translateY(1px);
+}
+
+.btn-close:hover {
+  background: rgba(239, 68, 68, .18);
+  border-color: rgba(239, 68, 68, .4);
+}
 
 .content {
   flex: 1;

@@ -2,7 +2,7 @@ import React from "react";
 import { useMedia } from "./hooks/useMedia";
 
 export default function App() {
-  const current = useMedia(20000); // 20 сек на медиафайл
+  const current = useMedia(15000); // 20 сек на медиафайл
 
   return (
     <div className="app">
@@ -37,7 +37,8 @@ export default function App() {
         <div className="window-buttons">
           {/* <button onClick={() => window.windowControls.minimize()}>−</button> */}
           {/* <button onClick={() => window.windowControls.toggleMaximize()}>▢</button> */}
-          <button onClick={() => window.windowControls.close()}>×</button>
+          <button className="btn-menu" onClick={() => window.windowControls.close()}>Menu</button>
+          <button className="btn" onClick={() => window.windowControls.close()}>x</button>
         </div>
       </div>
 
