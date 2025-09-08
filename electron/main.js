@@ -1,6 +1,7 @@
-import { app, BrowserWindow, ipcMain } from 'electron';
+import { app, BrowserWindow, ipcMain, shell } from 'electron';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -51,6 +52,11 @@ function createWindow() {
     return win.isMaximized();
   });
   ipcMain.handle('window:close', () => win?.close());
+  ipcMain.handle('window:open', async () => {
+    const folderPath = 'C:\Media\src\assets\media'; 
+    await shell.openPath(folderPath); // откроет проводник Windows в указанной папке
+  });
+
   ipcMain.handle('window:isMaximized', () => win?.isMaximized());
 }
 
