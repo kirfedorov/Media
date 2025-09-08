@@ -14,11 +14,11 @@ function createWindow() {
     // height: 1920,
     width: 360,
     height: 640,
-    // minWidth: 640,
-    // minHeight: 360,
+    minWidth: 640,
+    minHeight: 360,
     // fullscreen: true,   // на весь экран
     frame: false,       // без рамки
-    // kiosk: true,        // блокировка "выхода" пользователем
+    kiosk: true,        // блокировка "выхода" пользователем
     transparent: true,           // оставим фон нормальным (без прозрачности)
     show: false,                  // покажем, когда готов
     backgroundColor: '#2222c0d0',   // тёмный фон при запуске
@@ -53,7 +53,7 @@ function createWindow() {
   });
   ipcMain.handle('window:close', () => win?.close());
   ipcMain.handle('window:open', async () => {
-    const folderPath = 'C:\Media\src\assets\media'; 
+    const folderPath = 'C:\\Media\\src\\assets\\media'; 
     await shell.openPath(folderPath); // откроет проводник Windows в указанной папке
   });
 
