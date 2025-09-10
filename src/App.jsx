@@ -1,4 +1,5 @@
 import React from "react";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import { useMedia } from "./hooks/useMedia";
 
 export default function App() {
@@ -35,12 +36,17 @@ export default function App() {
 
       {/*  ШАПКА */}
       <div className="titlebar">
-        <div className="title">Аполлонния Мед 2025</div>
+        <div className="title">Аполлонния Мед 2025 </div>
+
 
         <div className="window-buttons">
           {/* Кнопка: Открыть папку */}
-          <button className="btn" onClick={() => window.windowControls.open()}>+</button>
-          {/* <button className="btn" onClick={() => window.windowControls.close()}>x</button> */}
+          <button className="btn" onClick={() => window.windowControls.open()}>
+         <i class="bi bi-folder-plus"></i>
+          </button>
+          {/* <button className="btn" onClick={() => window.windowControls.close()}>
+            <i class="bi bi-x-lg"></i>
+          </button> */}
         </div>
       </div>
 

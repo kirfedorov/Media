@@ -14,8 +14,8 @@ function createWindow() {
     // height: 1920,
     width: 360,
     height: 640,
-    minWidth: 640,
-    minHeight: 360,
+    // minWidth: 640,
+    // minHeight: 360,
     // fullscreen: true,   // на весь экран
     frame: false,       // без рамки
     kiosk: true,        // блокировка "выхода" пользователем
