@@ -4,7 +4,7 @@ import { useMedia } from "./hooks/useMedia";
 export default function App() {
 
 
-  const current = useMedia(15000); // 20 сек на медиафайл
+  const current = useMedia(20000); // 20 сек на медиафайл
 
   return (
     <div className="app">
