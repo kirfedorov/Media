@@ -57,6 +57,7 @@ body,
 }
 
 .titlebar,
+.footerbar,
 .content {
   position: relative;
   z-index: 2;
@@ -80,6 +81,24 @@ body,
   color: var(--muted);
   letter-spacing: .2px;
 }
+
+.footerbar {
+  -webkit-app-region: drag;
+  height: 44px;
+  background: var(--panel);
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  gap: 8px;
+  border-bottom: 1px solid rgba(10, 59, 194, 0.027);
+}
+
+.footer {
+  font-size: 8px;
+  color:#000;
+  letter-spacing: .2px;
+}
+
 
 /* Кнопки — НЕ drag */
 .window-buttons {

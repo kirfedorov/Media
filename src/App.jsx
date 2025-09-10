@@ -9,6 +9,7 @@ export default function App() {
 
   return (
     <div className="app">
+
       {/* ФОН ЕСЛТ НАДО */}
       {current?.type === "image" && (
         <div
@@ -42,7 +43,7 @@ export default function App() {
         <div className="window-buttons">
           {/* Кнопка: Открыть папку */}
           <button className="btn" onClick={() => window.windowControls.open()}>
-         <i class="bi bi-folder-plus"></i>
+            <i class="bi bi-folder-plus"></i>
           </button>
           {/* <button className="btn" onClick={() => window.windowControls.close()}>
             <i class="bi bi-x-lg"></i>
@@ -51,7 +52,22 @@ export default function App() {
       </div>
 
       <div className="content">
+        <p></p>
+      </div>
 
+      <div className="footerbar">
+        <div className="footer"><a>www.jokeberry.ru </a> </div>
+
+
+        <div className="window-buttons">
+          {/* Кнопка: Открыть папку */}
+          {/* <button className="btn" onClick={() => window.windowControls.open()}>
+            <i class="bi bi-folder-plus"></i>
+          </button> */}
+          {/* <button className="btn" onClick={() => window.windowControls.close()}>
+            <i class="bi bi-x-lg"></i>
+          </button> */}
+        </div>
       </div>
 
     </div>
